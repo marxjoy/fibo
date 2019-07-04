@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ n }} element ma wartość</h2>
+<h1><span class="badge badge-secondary"> 
+    {{ result }}
+    </span>
+</h1>
+
+
+
+<a href={{ url_for('index')}} class="btn btn-light">Powrót</a>
+
+{% endblock %}

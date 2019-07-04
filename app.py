@@ -8,8 +8,6 @@ app = Flask(__name__)
 class FiboForm(Form):
     fibo_text_field = IntegerField('Który element ciągu Fibonacciego obliczyć?', [validators.Required('Podaj liczbę całkowitą'),validators.NumberRange(0, 35, 'Podaj liczbę z przedziału 0-35')], )
 
-
-
     
 @app.route('/')
 def index():
@@ -26,4 +24,4 @@ def result():
     return render_template('form.html', form=form)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
